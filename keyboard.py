@@ -1,7 +1,8 @@
-from aiogram import types
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-
-menu = types.ReplyKeyboardMarkup(resize_keyboard=True)
-menu.add(
-	types.KeyboardButton('✉️ Получить почту')
+menu = ReplyKeyboardMarkup(
+    keyboard=[
+        [KeyboardButton(text='✉️ Получить почту')]
+    ],
+    resize_keyboard=True
 )
