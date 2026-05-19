@@ -15,7 +15,7 @@ dp = Dispatcher(bot)
 async def get_email_handler(m: types.Message):
     ma = Mailbox('')
     email = f'{ma._mailbox_}@1secmail.com'
-    await m.answer(f'📫 Твоя почта: {email}\n\nОтправляй письмо, почта проверяется автоматически, каждые 5 секунд, если придет новое письмо, мы вас об этом оповестим!\n\nНа 1 почту можно получить только - 1 письмо.\n\nРЕКОМЕНДУЕМ ПОДПИСАТЬСЯ НА НАШ КАНАЛ @UrallProject')
+    await m.answer(f'📫 Твоя почта: {email}\n\nОтправляй письмо, почта проверяется автоматически, каждые 5 секунд, если придет новое письмо, мы вас об этом оповестим!\n\nНа 1 почту можно получить только - 1 письмо.\n\nРЕКОМЕНДУЕМ ПОДПИСАТЬСЯ НА НАШ КАНАЛ @UrallProject', reply_markup=kb.menu)
     
     while True:
         mb = ma.filtred_mail()
